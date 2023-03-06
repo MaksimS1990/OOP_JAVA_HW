@@ -1,9 +1,10 @@
 package Task3;
 
-public class Cat {
-    public String name;
+public class Cat extends Pet {
+    private String name;
 
     public Cat(String name) {
+        super("кот");
         this.name = name;
     }
 
@@ -11,12 +12,7 @@ public class Cat {
         return name;
     }
 
-    public void CatPurrs() {
-        System.out.println("Барсик бежит к человеку и мурчит!");
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
+    public String LuckyPet () {
+        return "кот " + this.name +  " мурлычет!";
     }
 }

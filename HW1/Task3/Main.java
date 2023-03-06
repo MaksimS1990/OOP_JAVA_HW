@@ -1,15 +1,26 @@
 package Task3;
 
+import java.net.SocketTimeoutException;
+
 public class Main {
 
     public static void main(String[] args) {
-        Human humen = new Human("человек");
+        Human humen = new Human("Серёжа");
 
-        Cat cat = new Cat("Барсик");
+        Cat cat = new Cat("Феликс");
 
-        System.out.println(humen.getname());
-        System.out.println(cat.getname());
-        humen.HumenCallCat();
-        cat.CatPurrs();
+        Dog dog = new Dog("Бакс");
+
+        humen.strokingPet(cat.getname());
+        System.out.println(cat.LuckyPet());
+        System.out.println();
+
+        humen.strokingPet(dog.getname());
+        System.out.println(dog.LuckyPet1());
+        System.out.println();
+
+        humen.Calling();
+        cat.CallPet(cat.getname());
+        dog.CallPet(dog.getname());
     }
 }

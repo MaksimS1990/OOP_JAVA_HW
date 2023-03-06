@@ -7,24 +7,17 @@ public class Human {
         this.name = name;
     }
 
-    public String getname() {
-        return name;
-    }
-
-    public void setname(String name) {
-        this.name = name;
-    }
-
-    public void HumenCallCat() {
-        System.out.println("Человек зовет котика кис-кис....");
-    }
-
-
     @Override
     public String toString() {
-        return super.toString();
+        return this.name;
     }
 
-    public void humenOpenCloset() {
+    public void strokingPet(String name) {
+        System.out.println(this.name + " гладит " + name + "а");
     }
+
+    public void Calling() {
+        System.out.println(this.name + " зовёт своего питомца!");
+    }
+
 }
