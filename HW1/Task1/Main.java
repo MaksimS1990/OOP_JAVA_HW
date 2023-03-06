@@ -13,9 +13,17 @@ public class Main {
         gt.append(vasya, jane);
         gt.append(vasya, ivan);
 
+        System.out.println("У Ирины дети: ");
         System.out.println(new Reserch(gt).spend(irina,
                 Relationship.parent));
 
+        System.out.println("У Василия дети: ");
+        System.out.println(new Reserch(gt).spend(vasya,
+                Relationship.parent));
+
+        System.out.println("мама Маши: ");
+        System.out.println(new Reserch(gt).spend(masha,
+                Relationship.children));
     }
 
 }

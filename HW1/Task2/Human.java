@@ -11,16 +11,30 @@ public class Human {
         return name;
     }
 
-    public void humenOpenCloset() {
-        System.out.println("Человек открывает шкаф");
-    }
-
     public void setname(String name) {
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return this.name;
+    }
+
+    public void opened(Closet closet){
+        if (closet.state == Closet.State.closed) {
+            System.out.println(name + " открывает " + closet);
+
+        } else {
+            System.out.println(closet + " уже открыт!");
+        }
+    }
+
+    public void closed(Closet closet){
+        if (closet.state == Closet.State.opened) {
+            System.out.println(name + " закрывает " + closet);
+            closet.state = Closet.State.closed;
+        } else {
+           System.out.println(closet + " уже закрыт!");
+        }
     }
 }

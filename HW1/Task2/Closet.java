@@ -2,10 +2,8 @@ package Task2;
 
 public class Closet {
     public String closet;
-
-    public Closet(String closet) {
-        this.closet = closet;
-    }
+    private String item;
+    public  State state;
 
     public String getcloset() {
         return closet;
@@ -14,12 +12,18 @@ public class Closet {
         this.closet = closet;
     }
 
-    public void closetOpenDoor() {
-        System.out.println("Дверца у шкафа открывается");
+
+    public Closet (String item) {
+        this.item = item;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return this.item;
     }
+
+    enum State {
+        opened, closed
+    }
+
 }

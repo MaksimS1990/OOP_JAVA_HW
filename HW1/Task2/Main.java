@@ -7,9 +7,10 @@ public class Main {
 
         Closet closet = new Closet("шкаф");
 
-        System.out.println(humen.getname());
-        System.out.println(closet.getcloset());
-        humen.humenOpenCloset();
-        closet.closetOpenDoor();
+        closet.state = Closet.State.opened;
+
+        humen.opened(closet);
+        humen.closed(closet);
+        
     }
 }
