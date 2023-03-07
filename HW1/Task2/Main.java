@@ -7,10 +7,10 @@ public class Main {
 
         Closet closet = new Closet("шкаф");
 
-        closet.state = Closet.State.opened;
+        closet.state = Closet.State.closed;
 
         humen.opened(closet);
-        humen.closed(closet);
+        //humen.closed(closet);
         
     }
 }

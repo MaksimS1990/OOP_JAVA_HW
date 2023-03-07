@@ -1,5 +1,7 @@
 package Task1;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Person irina = new Person("Ирина");
@@ -8,22 +10,49 @@ public class Main {
         Person jane = new Person("Женя");
         Person ivan = new Person("Ваня");
         GeoTree gt = new GeoTree();
-        gt.append(irina, vasya);
-        gt.append(irina, masha);
-        gt.append(vasya, jane);
-        gt.append(vasya, ivan);
+        gt.append(irina, Relationship.parent, vasya, Relationship.children);
+        gt.append(irina, Relationship.parent, masha, Relationship.children);
+        gt.append(irina, Relationship.parent, jane, Relationship.children);
+        gt.append(ivan, Relationship.parent, masha, Relationship.children);
+        gt.append(ivan, Relationship.parent, vasya, Relationship.children);
+        gt.append(ivan, Relationship.parent, jane, Relationship.children);
+
+        gt.append(vasya, Relationship.sisterbrother, jane, Relationship.sisterbrother);
+        gt.append(vasya, Relationship.sisterbrother, masha, Relationship.sisterbrother);
+        gt.append(jane, Relationship.sisterbrother, vasya, Relationship.sisterbrother);
+        gt.append(jane, Relationship.sisterbrother, masha, Relationship.sisterbrother);
+
+        gt.append(irina, Relationship.husbandwife, ivan, Relationship.husbandwife);
 
         System.out.println("У Ирины дети: ");
         System.out.println(new Reserch(gt).spend(irina,
                 Relationship.parent));
+        System.out.println("-".repeat(150));
 
-        System.out.println("У Василия дети: ");
-        System.out.println(new Reserch(gt).spend(vasya,
+        System.out.println("У Ивана дети: ");
+        System.out.println(new Reserch(gt).spend(ivan,
                 Relationship.parent));
+        System.out.println("-".repeat(150));
 
-        System.out.println("мама Маши: ");
+        System.out.println("Родители Маши: ");
         System.out.println(new Reserch(gt).spend(masha,
                 Relationship.children));
+        System.out.println("-".repeat(150));
+
+        System.out.println("Братья и сёстры Маши: ");
+        System.out.println(new Reserch(gt).spend(masha,
+                Relationship.sisterbrother));
+        System.out.println("-".repeat(150));
+
+        System.out.println("Муж Ирины: ");
+        System.out.println(new Reserch(gt).spend(irina,
+                Relationship.husbandwife));
+        System.out.println("-".repeat(150));
+
+        System.out.println("Жена Ивана: ");
+        System.out.println(new Reserch(gt).spend(ivan,
+                Relationship.husbandwife));
+                
     }
 
 }

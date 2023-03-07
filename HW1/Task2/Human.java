@@ -23,18 +23,18 @@ public class Human {
     public void opened(Closet closet){
         if (closet.state == Closet.State.closed) {
             System.out.println(name + " открывает " + closet);
-
+            closet.state = Closet.State.opened;
         } else {
-            System.out.println(closet + " уже открыт!");
+            System.out.println(closet + " открыт!");
         }
     }
 
-    public void closed(Closet closet){
-        if (closet.state == Closet.State.opened) {
+     public void closed(Closet closet){
+         if (closet.state == Closet.State.opened) {
             System.out.println(name + " закрывает " + closet);
             closet.state = Closet.State.closed;
-        } else {
-           System.out.println(closet + " уже закрыт!");
-        }
+         } else {
+            System.out.println(closet + " закрыт!");
+         }
     }
 }
