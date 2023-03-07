@@ -37,4 +37,5 @@ public class Human {
             System.out.println(closet + " закрыт!");
          }
     }
+    
 }
