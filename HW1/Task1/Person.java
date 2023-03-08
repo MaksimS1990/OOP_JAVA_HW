@@ -1,18 +1,19 @@
 package Task1;
 
 public class Person {
+    public  String age;
     private String fullName;
 
-    enum Gender {
-        man, wooman
-    }
-
-    public Person(String fullName) {
+    public Person(String fullName, int age) {
         this.fullName = fullName;
     }
 
     public String getFullName() {
         return fullName;
+    }
+
+    public String getAge() {
+        return age;
     }
 
     public void setFullName(String fullName) {
@@ -22,5 +23,4 @@ public class Person {
     public String toString(){
         return String.format("%s, %d, %s", getFullName());
     }
-
 }

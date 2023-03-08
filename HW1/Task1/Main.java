@@ -1,14 +1,12 @@
 package Task1;
 
-//import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
-        Person irina = new Person("Ирина");
-        Person vasya = new Person("Вася");
-        Person masha = new Person("Маша");
-        Person jane = new Person("Женя");
-        Person ivan = new Person("Ваня");
+        Person irina = new Person("Ирина", 55);
+        Person vasya = new Person("Вася", 57);
+        Person masha = new Person("Маша", 24);
+        Person jane = new Person("Женя", 19);
+        Person ivan = new Person("Ваня", 25);
         GeoTree gt = new GeoTree();
         gt.append(irina, Relationship.parent, vasya, Relationship.children);
         gt.append(irina, Relationship.parent, masha, Relationship.children);
@@ -52,7 +50,7 @@ public class Main {
         System.out.println("Жена Ивана: ");
         System.out.println(new Reserch(gt).spend(ivan,
                 Relationship.husbandwife));
-                
+
     }
 
 }

@@ -18,4 +18,20 @@ public class Reserch {
         }
         return result;
 }
+
+public ArrayList<String> grandParents(Person p) {
+    String str = "";
+    for (Node t : tree) {
+        if (t.p1.getFullName() == p.getFullName() && t.re == Relationship.children) {
+            str = t.p2.getFullName();
+        }
+    }
+    for (Node t : tree) {
+        if (t.p1.getFullName() == str && t.re == Relationship.children) {
+            result.add(t.p2.getFullName());
+        }
+    }
+    return result;
+}
+
 }
