@@ -20,4 +20,8 @@ public class Human {
         System.out.println(this.name + " зовёт своего питомца!");
     }
 
+    public void HumenGoesToTheRivertoSwim() {
+        System.out.println(this.name + " идёт на речку поплавать");
+    }
+
 }

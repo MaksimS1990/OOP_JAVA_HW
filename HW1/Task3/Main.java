@@ -9,16 +9,35 @@ public class Main {
 
         Dog dog = new Dog("Бакс");
 
-        humen.strokingPet(cat.getname());
-        System.out.println(cat.LuckyPet());
-        System.out.println();
+        Pig pig = new Pig("Рок");
 
-        humen.strokingPet(dog.getname());
-        System.out.println(dog.LuckyPet1());
-        System.out.println();
+        humen.strokingPet(cat.getModel());
+        System.out.println(cat.LuckyPet());
+        System.out.println("-".repeat(150));
+
+        humen.strokingPet(dog.getModel());
+        System.out.println(dog.LuckyPet());
+        System.out.println("-".repeat(150));
+
+        humen.strokingPet(pig.getModel());
+        System.out.println(pig.LuckyPet());
+        System.out.println("-".repeat(150));
 
         humen.Calling();
-        cat.CallPet(cat.getname());
-        dog.CallPet(dog.getname());
+        cat.CallPet(cat.getModel());
+        System.out.println("-".repeat(150));
+        humen.Calling();
+        dog.CallPet(dog.getModel());
+        System.out.println("-".repeat(150));
+        humen.Calling();
+        pig.CallPet(pig.getModel());
+        System.out.println("-".repeat(150));
+        humen.HumenGoesToTheRivertoSwim();
+        dog.swim();
+        System.out.println();
+        System.out.println("-".repeat(150));
+        humen.HumenGoesToTheRivertoSwim();
+        pig.swim();
     }
+    
 }

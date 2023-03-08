@@ -1,18 +1,18 @@
 package Task3;
 
-public class Dog extends Pet {
-    private String name;
+public class Dog extends Pet implements Swimmable {
 
-    public Dog(String name) {
-        super("собака");
-        this.name = name;
+    public Dog(String model) {
+        super(model);
     }
 
-    public String getname() {
-        return name;
+    @Override
+    public String LuckyPet () {
+        return "Пёс " + super.getModel() +  " гавкает!";
     }
 
-    public String LuckyPet1 () {
-        return "собака " + this.name + " лает!";
+    @Override
+    public void swim() {
+        System.out.printf("Пёс " + super.getModel() + " тоже плавает");
     }
 }

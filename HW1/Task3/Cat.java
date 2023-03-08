@@ -1,18 +1,13 @@
 package Task3;
 
 public class Cat extends Pet {
-    private String name;
 
-    public Cat(String name) {
-        super("кот");
-        this.name = name;
+    public Cat(String model) {
+        super(model);
     }
 
-    public String getname() {
-        return name;
-    }
-
+    @Override
     public String LuckyPet () {
-        return "кот " + this.name +  " мурлычет!";
+        return "Кот " + super.getModel() +  " мурлычет!";
     }
 }
