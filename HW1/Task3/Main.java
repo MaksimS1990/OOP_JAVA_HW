@@ -32,11 +32,11 @@ public class Main {
         humen.Calling();
         pig.CallPet(pig.getModel());
         System.out.println("-".repeat(150));
-        humen.HumenGoesToTheRivertoSwim();
+        humen.HumanGoesToTheRivertoSwim();
         dog.swim();
         System.out.println();
         System.out.println("-".repeat(150));
-        humen.HumenGoesToTheRivertoSwim();
+        humen.HumanGoesToTheRivertoSwim();
         pig.swim();
     }
     

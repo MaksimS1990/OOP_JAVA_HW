@@ -1,6 +1,6 @@
 package Task3;
 
-public class Human {
+public class Human implements GoesToTheRivertoSwim {
     public String name;
 
     public Human(String name) {
@@ -16,12 +16,12 @@ public class Human {
         System.out.println(this.name + " гладит " + name + "а");
     }
 
-    public void Calling() {
-        System.out.println(this.name + " зовёт своего питомца!");
+    @Override
+    public void HumanGoesToTheRivertoSwim() {
+        System.out.println(this.name + " пошёл плавать и взял своего питомца");
     }
 
-    public void HumenGoesToTheRivertoSwim() {
-        System.out.println(this.name + " идёт на речку поплавать");
+    public void Calling() {
     }
 
 }
