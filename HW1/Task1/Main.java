@@ -50,10 +50,10 @@ public class Main {
 
     }
 
-        static void print(GeoTree tree, Person name, Relationship re){
-                System.out.printf("%s - %s по отношению к: ", name, re.toString());
-                System.out.println(new Reserch(tree).spend(name,re));
-            }
+        // static void print(GeoTree tree, Person name, Relationship re){
+        //         System.out.printf("%s - %s по отношению к: ", name, re.toString());
+        //         System.out.println(new Reserch(tree).spend(name,re));
+        //     }
         
         //     static void print(GeoTree tree, Person name, SearchRe re){
         //         String st = "";
