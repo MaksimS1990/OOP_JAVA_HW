@@ -22,35 +22,63 @@ public class Main {
 
         gt.append(irina, Relationship.husbandwife, ivan, Relationship.husbandwife);
 
-        System.out.println("У Ирины дети: ");
-        System.out.println(new Reserch(gt).spend(irina,
-                Relationship.parent));
+        System.out.print("У Ирины дети: ");
+        System.out.println(new Reserch(gt).spend(irina, Relationship.parent));
+
         System.out.println("-".repeat(150));
 
-        System.out.println("У Ивана дети: ");
-        System.out.println(new Reserch(gt).spend(ivan,
-                Relationship.parent));
+        System.out.print("У Ивана дети: ");
+        System.out.println(new Reserch(gt).spend(ivan, Relationship.parent));
+
         System.out.println("-".repeat(150));
 
-        System.out.println("Родители Маши: ");
-        System.out.println(new Reserch(gt).spend(masha,
-                Relationship.children));
+        System.out.print("Родители Маши: ");
+        System.out.println(new Reserch(gt).spend(masha, Relationship.children));
         System.out.println("-".repeat(150));
 
-        System.out.println("Братья и сёстры Маши: ");
-        System.out.println(new Reserch(gt).spend(masha,
-                Relationship.sisterbrother));
+        System.out.print("Братья и сёстры Маши: ");
+        System.out.println(new Reserch(gt).spend(masha,Relationship.sisterbrother));
         System.out.println("-".repeat(150));
 
-        System.out.println("Муж Ирины: ");
-        System.out.println(new Reserch(gt).spend(irina,
-                Relationship.husbandwife));
+        System.out.print("Муж Ирины: ");
+        System.out.println(new Reserch(gt).spend(irina,Relationship.husbandwife));
         System.out.println("-".repeat(150));
 
-        System.out.println("Жена Ивана: ");
-        System.out.println(new Reserch(gt).spend(ivan,
-                Relationship.husbandwife));
+        System.out.print("Жена Ивана: ");
+        System.out.println(new Reserch(gt).spend(ivan,Relationship.husbandwife));
+        System.out.println("-".repeat(150));
 
     }
 
-}
+        static void print(GeoTree tree, Person name, Relationship re){
+                System.out.printf("%s - %s по отношению к: ", name, re.toString());
+                System.out.println(new Reserch(tree).spend(name,re));
+            }
+        
+        //     static void print(GeoTree tree, Person name, SearchRe re){
+        //         String st = "";
+        //         if (re == SearchRe.grandParent) {
+        //             if (name.getGender() == "Female") st = "GrandMother";
+        //             else if (name.getGender() == "Male") st = "GrandFather";
+        //             }
+        //         else if (re == SearchRe.grandChildren) {
+        //             if (name.getGender() == "Male") st = "GrandSon";
+        //             else if (name.getGender() == "Female") st = "GrandDaughter";
+        //         }
+        //         System.out.printf("%s - %s по отношению к: ", name, st);
+        //         System.out.println(new Reserch(tree).spend(name,re));
+        //     }
+
+        //     static void print(GeoTree tree, SearchAge se, int age){
+        //         String st = "";
+        //         if (se == SearchAge.ageYounger) st = "до";
+        //         else if (se == SearchAge.ageOlder) st = "от";
+        //         System.out.printf("Люди %s %d: ", st, age);
+        //         System.out.println(new Reserch(tree).spend(se, age));
+        //     }
+        
+        //     static void print(GeoTree tree, Gender ge){
+        //         System.out.printf("Выводим всех %s: ", ge);
+        //         System.out.println(new Reserch(tree).spend(ge));
+        //     }
+    }

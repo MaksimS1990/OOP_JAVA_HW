@@ -1,18 +1,19 @@
 package Task1;
 
 public class Person {
-    public  String age;
+    public  int age;
     private String fullName;
 
-    public Person(String fullName, int age) {
+    public Person(String fullName, int age) {                    // конструктор
         this.fullName = fullName;
+        this.age = age;
     }
 
     public String getFullName() {
         return fullName;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
@@ -21,6 +22,6 @@ public class Person {
     }
 
     public String toString(){
-        return String.format("%s, %d, %s", getFullName());
+        return String.format("%s- %s", getFullName(), getAge());
     }
 }
