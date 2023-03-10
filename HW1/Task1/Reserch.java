@@ -3,9 +3,9 @@ package Task1;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-enum SearchRe {
-    grandParent,
-    grandChildren,
+enum SearchAge {
+    younger,
+    older
 }
 
 public class Reserch {
@@ -31,14 +31,12 @@ public class Reserch {
         return result;
     }
 
-    public HashSet<Person> spend(Person p, SearchRe re){
-        Relationship reTemp = Relationship.parent;
-        if (re == SearchRe.grandParent) reTemp = Relationship.parent;
-        if (re == SearchRe.grandChildren) reTemp = Relationship.children;
-        ArrayList<Person> resultTemp = new ArrayList<Person>(spend(p, reTemp));
-        this.result.clear();
-            for (Person q: resultTemp) spend(q, reTemp);
-        return result;
+    public HashSet<Person> spend(SearchAge re, int ageRe){
+        for (Node t : tree) {
+            if (re == SearchAge.older) if (t.p1.getAge() >= ageRe) result.add(t.p1);
+            if (re == SearchAge.younger) if (t.p1.getAge() <= ageRe) result.add(t.p1);
+        }
+            return result;
     }
 
 }
