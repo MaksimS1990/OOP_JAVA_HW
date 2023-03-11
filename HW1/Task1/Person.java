@@ -22,6 +22,6 @@ public class Person {
     }
 
     public String toString(){
-        return String.format("%s- %s", getFullName(), getAge());
+        return String.format("%s (%s)", getFullName(), getAge());
     }
 }

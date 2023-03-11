@@ -8,7 +8,7 @@ enum SearchAge {
     older
 }
 
-public class Reserch {
+public class Reserch{
     HashSet<Person> result = new HashSet<>();
     ArrayList<Node> tree;
 
@@ -21,7 +21,7 @@ public class Reserch {
         for (Person t : this.result) names.append(t.getFullName());
         return names.toString();
     }
-
+    
     public HashSet<Person> spend(Person p, Relationship re) {
         for (Node t : tree) {
             if (t.p1.getFullName() == p.getFullName() && t.re == re) {
@@ -38,7 +38,6 @@ public class Reserch {
         }
             return result;
     }
-
 }
 
 

@@ -2,7 +2,8 @@ package Task1;
 
 import java.util.ArrayList;
 
-public class GeoTree {
+public class GeoTree extends Humanity {
+
     private ArrayList<Node> tree = new ArrayList<>();
 
     public ArrayList<Node> getTree() {
@@ -13,4 +14,5 @@ public class GeoTree {
         tree.add(new Node(person1, re1, person2));
         tree.add(new Node(person2, re2, person1));
     }
+    
 }
