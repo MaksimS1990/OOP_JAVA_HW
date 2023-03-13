@@ -2,8 +2,8 @@ package Task3;
 
 public class Cat extends Pet {
 
-    public Cat(String model) {
-        super(model);
+    public Cat(String model, int age) {
+        super(model, age);
     }
 
     @Override

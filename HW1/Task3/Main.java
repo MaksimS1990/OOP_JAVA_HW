@@ -5,11 +5,13 @@ public class Main {
     public static void main(String[] args) {
         Human humen = new Human("Серёжа");
 
-        Cat cat = new Cat("Феликс");
+        Cat cat = new Cat("Феликс", 2);
 
-        Dog dog = new Dog("Бакс");
+        Dog dog = new Dog("Бакс", 3);
 
-        Pig pig = new Pig("Рок");
+        Pig pig = new Pig("Рок", 5);
+
+        // System.out.println(cat.equals(pig));
 
         humen.strokingPet(cat.getModel());
         System.out.println(cat.LuckyPet());

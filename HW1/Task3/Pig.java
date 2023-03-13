@@ -2,8 +2,8 @@ package Task3;
 
 public class Pig extends Pet implements Swimmable {
 
-    public Pig(String model) {
-        super(model);
+    public Pig(String model, int age) {
+        super(model, age);
     }
 
     @Override

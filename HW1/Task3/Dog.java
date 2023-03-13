@@ -2,8 +2,8 @@ package Task3;
 
 public class Dog extends Pet implements Swimmable {
 
-    public Dog(String model) {
-        super(model);
+    public Dog(String model, int age) {
+        super(model, age);
     }
 
     @Override
@@ -16,5 +16,5 @@ public class Dog extends Pet implements Swimmable {
         System.out.printf("Пёс " + super.getModel() + " тоже плавает");
 
     }
-    
+
 }
