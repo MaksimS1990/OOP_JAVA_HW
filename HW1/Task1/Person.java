@@ -1,6 +1,6 @@
 package Task1;
 
-public class Person {
+public class Person extends Humanity {
     public  int age;
     private String fullName;
 
