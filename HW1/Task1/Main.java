@@ -1,5 +1,6 @@
 package Task1;
 
+import java.rmi.StubNotFoundException;
 import java.util.ArrayList;
 //import java.util.Collections;
 //import java.util.Iterator;
@@ -42,6 +43,15 @@ public class Main {
         Family.add(masha);
         Family.add(vasya);
         Family.add(vera);
+
+        System.out.println("Проверка равенства двух людей из семьи по имени: ");
+        System.out.println("-".repeat(150));
+        System.out.println(masha.getFullName() == masha.getFullName());
+        System.out.println("-".repeat(150));
+        System.out.println("Проверка равенства двух людей из семьи по имени: ");
+        System.out.println("-".repeat(150));
+        System.out.println(masha.getFullName() == vera.getFullName());
+        System.out.println("-".repeat(150));
 
         // System.out.println("Все родственники из Вашей семьи: ");
         // Iterator<Person> iterator = Family.iterator();                  // с помощью итератора бежим по нашей коллекции и все элементы выводим
