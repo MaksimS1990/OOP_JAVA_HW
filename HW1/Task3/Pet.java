@@ -1,13 +1,14 @@
 package Task3;
 
-public abstract class Pet extends livingСreatures {
+public abstract class Pet extends PetAgeComparator {
 
     private String model;
 
-    public int age;
+    private int age;
 
     public Pet(String model, int age) {
         this.model = model;
+        this.age = age;
     }
 
     @Override
@@ -26,11 +27,12 @@ public abstract class Pet extends livingСreatures {
         this.model = model;
     }
 
-    public void setage(int age) {
+    public void setAge(int age) {
+        this.age = age;
     }
-
-    public String getAge() {
-        return this.getAge();
+    
+    public int getAge() {
+        return age;
     }
 
     @Override
