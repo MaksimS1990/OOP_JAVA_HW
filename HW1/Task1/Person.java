@@ -1,6 +1,6 @@
 package Task1;
 
-public class Person extends Humanity {
+public class Person extends Humanity implements Comparable<Person> {
     public  int age;
     private String fullName;
 
@@ -23,5 +23,10 @@ public class Person extends Humanity {
 
     public String toString(){
         return String.format("%s (%s)", getFullName(), getAge());
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.getAge() - o.getAge();
     }
 }
