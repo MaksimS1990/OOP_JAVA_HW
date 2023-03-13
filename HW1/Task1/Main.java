@@ -4,8 +4,6 @@ import java.util.ArrayList;
 //import java.util.Collections;
 //import java.util.Iterator;
 //import java.util.ListIterator;
-//import java.util.Collections;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -20,14 +18,19 @@ public class Main {
         gt.append(irina, Relationship.parent, vasya, Relationship.children);
         gt.append(irina, Relationship.parent, masha, Relationship.children);
         gt.append(irina, Relationship.parent, jane, Relationship.children);
+        gt.append(irina, Relationship.parent, vera, Relationship.children);
         gt.append(ivan, Relationship.parent, masha, Relationship.children);
         gt.append(ivan, Relationship.parent, vasya, Relationship.children);
         gt.append(ivan, Relationship.parent, jane, Relationship.children);
+        gt.append(ivan, Relationship.parent, vera, Relationship.children);
 
         gt.append(vasya, Relationship.brother, jane, Relationship.sister);
         gt.append(vasya, Relationship.brother, masha, Relationship.sister);
+        gt.append(vasya, Relationship.sister, vera, Relationship.sister);
         gt.append(jane, Relationship.sister, vasya, Relationship.brother);
         gt.append(jane, Relationship.sister, masha, Relationship.sister);
+        gt.append(jane, Relationship.sister, vera, Relationship.sister);
+        gt.append(masha, Relationship.sister, vera, Relationship.sister);
 
         gt.append(irina, Relationship.wife, ivan, Relationship.husband);
 
@@ -50,8 +53,8 @@ public class Main {
         System.out.println("-".repeat(150));
         System.out.println("-".repeat(150));
 
-        Family.sort(new PersonAgeComparator());                         // сортируем коллекцию при помощи созданного класса Comparator
-        // Collections.sort(Family, new PersonNameComparator());        // классический вид вызова сортировки компаратором
+        Family.sort(new PersonAgeComparator());                            // сортируем коллекцию при помощи созданного класса Comparator
+        // Collections.sort(Family, new PersonNameComparator());           // классический вид вызова сортировки компаратором
 
         System.out.println("Сравнение двух членов семьи по возрасту: ");
         System.out.println("-".repeat(150));

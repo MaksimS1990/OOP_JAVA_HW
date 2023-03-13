@@ -29,4 +29,22 @@ public class Person extends Humanity implements Comparable<Person> {
     public int compareTo(Person o) {
         return this.getAge() - o.getAge();
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obg) {
+        if (obg == null) {
+            return false;
+        } else if (this.getClass() != obg.getClass()) {
+            return false;
+        } else if (this.getFullName().equals(((Person) obg).getFullName())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
