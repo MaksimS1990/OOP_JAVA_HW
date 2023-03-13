@@ -1,6 +1,6 @@
 package Task3;
 
-public class Human implements GoesToTheRivertoSwim {
+public class Human extends livingСreatures implements GoesToTheRivertoSwim {
     public String name;
 
     public Human(String name) {

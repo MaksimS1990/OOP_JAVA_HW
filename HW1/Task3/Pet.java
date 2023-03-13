@@ -1,6 +1,6 @@
 package Task3;
 
-public abstract class Pet {
+public abstract class Pet extends livingСreatures {
 
     private String model;
 
