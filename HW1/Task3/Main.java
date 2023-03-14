@@ -47,8 +47,10 @@ public class Main {
         Collections.sort(newlist, new PetNameComparator());
         System.out.println("Ваш отсортированный по имени список домашних питомцев: ");
         System.out.println(newlist);
+        System.out.println("-".repeat(150));
+        System.out.println("-".repeat(150));
 
-        System.out.println(cat.equals(pig));
+        // System.out.println(cat.equals(pig));           питомцы не равны
 
         humen.strokingPet(cat.getModel());
         System.out.println(cat.LuckyPet());
@@ -62,13 +64,13 @@ public class Main {
         System.out.println(pig.LuckyPet());
         System.out.println("-".repeat(150));
 
-        humen.CallingPet();
+        humen.CallingPet(cat);
         cat.CallPet(cat.getModel());
         System.out.println("-".repeat(150));
-        humen.CallingPet();
+        humen.CallingPet(dog);
         dog.CallPet(dog.getModel());
         System.out.println("-".repeat(150));
-        humen.CallingPet();
+        humen.CallingPet(pig);
         pig.CallPet(pig.getModel());
         System.out.println("-".repeat(150));
         humen.HumanGoesToTheRivertoSwim(dog);
