@@ -13,7 +13,7 @@ public class Dog extends Pet implements Swimmable {
 
     @Override
     public void swim() {
-        System.out.printf("Пёс " + super.getModel() + " тоже плавает");
+        System.out.printf(super.getModel() + " тоже плавает");
 
     }
 

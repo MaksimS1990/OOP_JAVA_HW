@@ -21,7 +21,7 @@ public class Human implements GoesToTheRivertoSwim {
         System.out.println(this.name + " пошёл плавать и взял своего питомца");
     }
 
-    public void Calling() {
+    public void CallingPet() {
     }
 
 }

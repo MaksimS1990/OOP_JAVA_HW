@@ -54,4 +54,7 @@ public abstract class Pet extends PetAgeComparator {
     }
 
     abstract String LuckyPet();
+
+    public void swim() {
+    }
 }
