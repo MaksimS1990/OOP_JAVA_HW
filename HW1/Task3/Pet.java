@@ -35,23 +35,23 @@ public abstract class Pet extends PetAgeComparator {
         return age;
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
+    // @Override
+    // public int hashCode() {
+    //     return super.hashCode();
+    // }
 
-    @Override
-    public boolean equals(Object obg) {
-        if (obg == null) {
-            return false;
-        } else if (this.getClass() != obg.getClass()) {
-            return false;
-        } else if (this.getModel().equals(((Pet) obg).getModel())) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    // @Override
+    // public boolean equals(Object obg) {
+    //     if (obg == null) {
+    //         return false;
+    //     } else if (this.getClass() != obg.getClass()) {
+    //         return false;
+    //     } else if (this.getModel().equals(((Pet) obg).getModel())) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    //}
 
     abstract String LuckyPet();
 

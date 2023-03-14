@@ -2,7 +2,6 @@ package Task3;
 
 import java.util.ArrayList;
 import java.util.Collections;
-//import java.util.Collections;
 import java.util.Iterator;
 //import java.util.ListIterator;
 
@@ -49,35 +48,35 @@ public class Main {
         System.out.println("Ваш отсортированный по имени список домашних питомцев: ");
         System.out.println(newlist);
 
-        // System.out.println(cat.equals(pig));
+        System.out.println(cat.equals(pig));
 
-        // humen.strokingPet(cat.getModel());
-        // System.out.println(cat.LuckyPet());
-        // System.out.println("-".repeat(150));
+        humen.strokingPet(cat.getModel());
+        System.out.println(cat.LuckyPet());
+        System.out.println("-".repeat(150));
 
-        // humen.strokingPet(dog.getModel());
-        // System.out.println(dog.LuckyPet());
-        // System.out.println("-".repeat(150));
+        humen.strokingPet(dog.getModel());
+        System.out.println(dog.LuckyPet());
+        System.out.println("-".repeat(150));
 
-        // humen.strokingPet(pig.getModel());
-        // System.out.println(pig.LuckyPet());
-        // System.out.println("-".repeat(150));
+        humen.strokingPet(pig.getModel());
+        System.out.println(pig.LuckyPet());
+        System.out.println("-".repeat(150));
 
-        // humen.CallingPet();
-        // cat.CallPet(cat.getModel());
-        // System.out.println("-".repeat(150));
-        // humen.CallingPet();
-        // dog.CallPet(dog.getModel());
-        // System.out.println("-".repeat(150));
-        // humen.CallingPet();
-        // pig.CallPet(pig.getModel());
-        // System.out.println("-".repeat(150));
-        // humen.HumanGoesToTheRivertoSwim();
-        // dog.swim();
-        // System.out.println();
-        // System.out.println("-".repeat(150));
-        // humen.HumanGoesToTheRivertoSwim();
-        //pig.swim();
+        humen.CallingPet();
+        cat.CallPet(cat.getModel());
+        System.out.println("-".repeat(150));
+        humen.CallingPet();
+        dog.CallPet(dog.getModel());
+        System.out.println("-".repeat(150));
+        humen.CallingPet();
+        pig.CallPet(pig.getModel());
+        System.out.println("-".repeat(150));
+        humen.HumanGoesToTheRivertoSwim(dog);
+        dog.swim();
+        System.out.println();
+        System.out.println("-".repeat(150));
+        humen.HumanGoesToTheRivertoSwim(pig);
+        pig.swim();
     }
     
 }

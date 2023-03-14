@@ -1,6 +1,6 @@
 package Task3;
 
-public class Human implements GoesToTheRivertoSwim {
+public class Human implements HumenGoesToTheRiver {
     public String name;
 
     public Human(String name) {
@@ -17,8 +17,8 @@ public class Human implements GoesToTheRivertoSwim {
     }
 
     @Override
-    public void HumanGoesToTheRivertoSwim() {
-        System.out.println(this.name + " пошёл плавать и взял своего питомца");
+    public void HumanGoesToTheRivertoSwim(Pet pet) {
+        System.out.println(this.name + " пошёл плавать и взял своего питомца " + pet + "а");
     }
 
     public void CallingPet() {
