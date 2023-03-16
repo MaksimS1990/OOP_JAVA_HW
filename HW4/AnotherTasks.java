@@ -1,5 +1,5 @@
 package HW4;
 
-public class AnotherTasks extends VeryUrgentTasks {
+public class AnotherTasks extends ListTasks {
     
 }
