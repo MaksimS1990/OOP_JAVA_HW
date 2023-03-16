@@ -10,12 +10,12 @@ import java.util.*;
         public int Deadline;
         public String NameAuthor;
        
-        public ListTasks() {
-            // this.ID = ID;
-            // this.NameOfTheTask = NameOfTheTask;
-            // this.TimeOfAddition = TimeOfAddition;
-            // this.Deadline = Deadline;
-            // this.NameAuthor = NameAuthor;
+        public ListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int Deadline, String NameAuthor) {
+            this.ID = ID;
+            this.NameOfTheTask = NameOfTheTask;
+            this.TimeOfAddition = TimeOfAddition;
+            this.Deadline = Deadline;
+            this.NameAuthor = NameAuthor;
         }
     
         public String getNameOfTheTask() {
