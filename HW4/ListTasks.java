@@ -1,22 +1,21 @@
 package HW4;
 
-import java.util.Calendar;
+import java.util.*;
 
-public abstract class ListTasks {
+ public abstract class ListTasks {
 
         public int ID;
         public String NameOfTheTask;
-        public Calendar TimeOfAddition;
-        public Calendar Deadline;
+        public int TimeOfAddition;
+        public int Deadline;
         public String NameAuthor;
-    
-    
-        public void ListTask(int ID, String NameOfTheTask, Calendar TimeOfAddition, Calendar Deadline, String NameAuthor) {
-            this.ID = ID;
-            this.NameOfTheTask = NameOfTheTask;
-            this.TimeOfAddition = TimeOfAddition;
-            this.Deadline = Deadline;
-            this.NameAuthor = NameAuthor;
+       
+        public ListTasks() {
+            // this.ID = ID;
+            // this.NameOfTheTask = NameOfTheTask;
+            // this.TimeOfAddition = TimeOfAddition;
+            // this.Deadline = Deadline;
+            // this.NameAuthor = NameAuthor;
         }
     
         public String getNameOfTheTask() {
@@ -27,11 +26,11 @@ public abstract class ListTasks {
             return this.NameOfTheTask = NameOfTheTask;
         }
     
-        public Calendar getDeadline() {
+        public int getDeadline() {
             return Deadline;
         }
     
-        public Calendar setDeadline(Calendar Deadline) {
+        public int setDeadline(int Deadline) {
             return this.Deadline = Deadline;
         }
     
@@ -51,16 +50,16 @@ public abstract class ListTasks {
             return this.ID = ID;
         }
     
-        public Calendar getTimeOfAddition() {
+        public int getTimeOfAddition() {
             return TimeOfAddition;
         }
     
-        public Calendar setTimeOfAddition(Calendar TimeOfAddition) {
+        public int setTimeOfAddition(int TimeOfAddition) {
             return this.TimeOfAddition = TimeOfAddition;
         }
     
-        public String toString(){
-            return String.format("%s %s %s %s %s", getID(), getNameOfTheTask(), getDeadline(), getNameAuthor(), getTimeOfAddition());
-        }
+        // public String toString(){
+        //     return String.format("%s, %tc, %s, %tc, %s", getID(), getNameOfTheTask(),getTimeOfAddition(), getDeadline(), getNameAuthor());
+        // }
        
 }
