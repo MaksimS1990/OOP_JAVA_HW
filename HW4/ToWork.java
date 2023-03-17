@@ -6,7 +6,7 @@ public class ToWork {
 
     public static void main(String[] args) {
 
-        MostImportantTasks most = new MostImportantTasks(12345, "most", 160323, 4,2003, "Sipatov");
+        MostImportantTasks most = new MostImportantTasks(12345, "most", 160323, 4,2003, "Samsonov");
 
         LowerTasks lower = new LowerTasks(23411, "lowe", 160323, 2,2003, "Ivanov");
 
