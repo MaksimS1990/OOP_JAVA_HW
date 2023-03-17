@@ -59,7 +59,7 @@ package HW4;
         }
     
          public String toString(){
-             return String.format("ID: %d, Название задачи:  %s Дата создания: %d, Дэдлайн: %d, Создал: %s ;" , getID(),
+             return String.format("ID: %d      Название задачи: %s      Дата создания: %d      Дэдлайн: %d      Создал: %s      " , getID(),
             getNameOfTheTask(),getTimeOfAddition(), getDeadline(), getNameAuthor());
         }
        
