@@ -1,7 +1,5 @@
 package HW4;
 
-//import java.util.*;
-
  public abstract class AbstractListTasks {
 
         public int ID;
@@ -9,11 +7,13 @@ package HW4;
         public int TimeOfAddition;
         public int Deadline;
         public String NameAuthor;
+        public int DegreeOfImportance;
        
-        public AbstractListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int Deadline, String NameAuthor) {
+        public AbstractListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int DegreeOfImportance ,int Deadline, String NameAuthor) {
             this.ID = ID;
             this.NameOfTheTask = NameOfTheTask;
             this.TimeOfAddition = TimeOfAddition;
+            this.DegreeOfImportance = DegreeOfImportance;
             this.Deadline = Deadline;
             this.NameAuthor = NameAuthor;
         }
@@ -57,10 +57,18 @@ package HW4;
         public int setTimeOfAddition(int TimeOfAddition) {
             return this.TimeOfAddition = TimeOfAddition;
         }
+
+        public int getDegreeOfImportance() {
+            return DegreeOfImportance;
+        }
+    
+        public int setDegreeOfImportance(int DegreeOfImportance) {
+            return this.DegreeOfImportance = DegreeOfImportance;
+        }
     
          public String toString(){
-             return String.format("ID: %d      Название задачи: %s      Дата создания: %d      Дэдлайн: %d      Создал: %s      " , getID(),
-            getNameOfTheTask(),getTimeOfAddition(), getDeadline(), getNameAuthor());
+             return String.format("ID: %d      Название задачи: %s      Дата создания: %d      Степень важности:  %d      Дэдлайн: %d      Создал: %s      " ,
+              getID(), getNameOfTheTask(),getTimeOfAddition(), getDegreeOfImportance(), getDeadline(), getNameAuthor());
         }
        
 }
