@@ -2,6 +2,13 @@ package HW4;
 
  public abstract class AbstractListTasks {
 
+    public enum Priority {
+        lower,
+        lessimportant,
+        mostimportant,
+        important
+    }
+
         public int ID;
         public String NameOfTheTask;
         public int TimeOfAddition;
