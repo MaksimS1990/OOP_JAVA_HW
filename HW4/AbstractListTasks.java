@@ -2,7 +2,7 @@ package HW4;
 
 //import java.util.*;
 
- public abstract class ListTasks {
+ public abstract class AbstractListTasks {
 
         public int ID;
         public String NameOfTheTask;
@@ -10,7 +10,7 @@ package HW4;
         public int Deadline;
         public String NameAuthor;
        
-        public ListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int Deadline, String NameAuthor) {
+        public AbstractListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int Deadline, String NameAuthor) {
             this.ID = ID;
             this.NameOfTheTask = NameOfTheTask;
             this.TimeOfAddition = TimeOfAddition;
@@ -58,8 +58,9 @@ package HW4;
             return this.TimeOfAddition = TimeOfAddition;
         }
     
-        // public String toString(){
-        //     return String.format("%s, %tc, %s, %tc, %s", getID(), getNameOfTheTask(),getTimeOfAddition(), getDeadline(), getNameAuthor());
-        // }
+         public String toString(){
+             return String.format("ID: %d, Название задачи:  %s Дата создания: %d, Дэдлайн: %d, Создал: %s ;" , getID(),
+            getNameOfTheTask(),getTimeOfAddition(), getDeadline(), getNameAuthor());
+        }
        
 }
