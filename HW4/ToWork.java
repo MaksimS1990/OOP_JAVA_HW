@@ -28,7 +28,7 @@ public class ToWork {
         System.out.println("Список задач, отсортированный по Deadline: ");
         Tasks.sort(new DeadlineComparator());
         for (AbstractListTasks d : Tasks) {
-            System.out.println(d); ;
+            System.out.println(d);
         }
 
         System.out.println("-".repeat(150));
