@@ -6,6 +6,6 @@ public class DeadlineComparator implements Comparator<AbstractListTasks> {
     
     @Override
     public int compare(AbstractListTasks d1, AbstractListTasks d2) {
-        return d1.getDeadline() - d2.getDeadline();
+        return d1.getDeadline().compareTo(d2.getDeadline());
     }
 }

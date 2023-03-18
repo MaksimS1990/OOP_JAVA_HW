@@ -1,27 +1,23 @@
 package HW4;
 
- public abstract class AbstractListTasks {
+import java.util.Date;
 
-    public enum Priority {
-        lower,
-        lessimportant,
-        mostimportant,
-        important
-    }
+public abstract class AbstractListTasks {
+
 
         public int ID;
         public String NameOfTheTask;
         public int TimeOfAddition;
-        public int Deadline;
+        public Date Deadline;
         public String NameAuthor;
         public int DegreeOfImportance;
        
-        public AbstractListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int DegreeOfImportance ,int Deadline, String NameAuthor) {
+        public AbstractListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int DegreeOfImportance, int y, int m, int d, String NameAuthor) {
             this.ID = ID;
             this.NameOfTheTask = NameOfTheTask;
             this.TimeOfAddition = TimeOfAddition;
             this.DegreeOfImportance = DegreeOfImportance;
-            this.Deadline = Deadline;
+            this.Deadline = new Date(y, m, d);
             this.NameAuthor = NameAuthor;
         }
     
@@ -33,11 +29,15 @@ package HW4;
             return this.NameOfTheTask = NameOfTheTask;
         }
     
-        public int getDeadline() {
+        public Date getDeadline() {
             return Deadline;
         }
+
+        public String getDeadlineToString() {
+            return this.Deadline.toString();
+        }
     
-        public int setDeadline(int Deadline) {
+        public Date setDeadline(Date Deadline) {
             return this.Deadline = Deadline;
         }
     
@@ -74,8 +74,8 @@ package HW4;
         }
     
          public String toString(){
-             return String.format("ID: %d      Название задачи: %s      Дата создания: %d      Степень важности:  %d      Дэдлайн: %d      Создал: %s      " ,
-              getID(), getNameOfTheTask(),getTimeOfAddition(), getDegreeOfImportance(), getDeadline(), getNameAuthor());
+             return String.format("ID: %d      Название задачи: %s      Дата создания: %d      Степень важности:  %d      Дэдлайн: %s      Создал: %s      " ,
+            getID(), getNameOfTheTask(),getTimeOfAddition(), getDegreeOfImportance(), getDeadlineToString(), getNameAuthor());
         }
        
 }
