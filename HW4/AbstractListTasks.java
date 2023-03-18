@@ -1,23 +1,23 @@
 package HW4;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class AbstractListTasks {
 
 
         public int ID;
         public String NameOfTheTask;
-        public int TimeOfAddition;
-        public Date Deadline;
+        public LocalDate TimeOfAddition;
+        public LocalDate Deadline;
         public String NameAuthor;
         public int DegreeOfImportance;
        
-        public AbstractListTasks(int ID, String NameOfTheTask, int TimeOfAddition, int DegreeOfImportance, int y, int m, int d, String NameAuthor) {
+        public AbstractListTasks(int ID, String NameOfTheTask, int t, int r, int c, int DegreeOfImportance, int y, int m, int d, String NameAuthor) {
             this.ID = ID;
             this.NameOfTheTask = NameOfTheTask;
-            this.TimeOfAddition = TimeOfAddition;
+            this.TimeOfAddition = LocalDate.of(y, m, d);
             this.DegreeOfImportance = DegreeOfImportance;
-            this.Deadline = new Date(y, m, d);
+            this.Deadline = LocalDate.of(y, m, d);
             this.NameAuthor = NameAuthor;
         }
     
@@ -29,7 +29,7 @@ public abstract class AbstractListTasks {
             return this.NameOfTheTask = NameOfTheTask;
         }
     
-        public Date getDeadline() {
+        public LocalDate getDeadline() {
             return Deadline;
         }
 
@@ -37,7 +37,7 @@ public abstract class AbstractListTasks {
             return this.Deadline.toString();
         }
     
-        public Date setDeadline(Date Deadline) {
+        public LocalDate setDeadline(LocalDate Deadline) {
             return this.Deadline = Deadline;
         }
     
@@ -57,12 +57,16 @@ public abstract class AbstractListTasks {
             return this.ID = ID;
         }
     
-        public int getTimeOfAddition() {
+        public LocalDate getTimeOfAddition() {
             return TimeOfAddition;
         }
     
-        public int setTimeOfAddition(int TimeOfAddition) {
+        public LocalDate setTimeOfAddition(LocalDate TimeOfAddition) {
             return this.TimeOfAddition = TimeOfAddition;
+        }
+
+        public String getTimeOfAdditionToString(String TimeOfAddition) {
+            return this.TimeOfAddition.toString();
         }
 
         public int getDegreeOfImportance() {
@@ -74,7 +78,7 @@ public abstract class AbstractListTasks {
         }
     
          public String toString(){
-             return String.format("ID: %d      Название задачи: %s      Дата создания: %d      Степень важности:  %d      Дэдлайн: %s      Создал: %s      " ,
+             return String.format("ID: %d  Название задачи: %s  Дата создания: %s  Степень важности:  %d  Дэдлайн: %s  Создал: %s   " ,
             getID(), getNameOfTheTask(),getTimeOfAddition(), getDegreeOfImportance(), getDeadlineToString(), getNameAuthor());
         }
        
