@@ -1,6 +1,6 @@
 package HW5;
 
-public class Person {
+public class Person implements Printable {
     
     private String Name;
     private String Surname;
@@ -37,6 +37,10 @@ public class Person {
     }
 
     public void print() {
-        System.out.println(this.Name + " - " + this.Surname + " - " + this.PhoneNumber);
+        System.out.println(this.Name + " " + this.Surname + " " + this.PhoneNumber);
+    }
+
+    public boolean contains(String str) {
+        return this.PhoneNumber.contains(str) || this.Name.contains(str) || this.Surname.contains(str);
     }
 }
