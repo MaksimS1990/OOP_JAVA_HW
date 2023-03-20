@@ -40,7 +40,7 @@ public class PhoneBook {
         List.remove(in - 1);
     }
 
-    public void writeToFile(ArrayList<Person> PersonList) throws IOException {
+    public void writeToFile(ArrayList<Person> PersonList) throws IOException {                            // записываем в файл
         FileWriter fw = new FileWriter("PhoneBooke.csv", false);
         for (Person p : PersonList) {
             fw.write(p.getName() + " - " + p.getSurname() + " - " + p.getPhoneNumber() + "\n");
@@ -48,7 +48,7 @@ public class PhoneBook {
         fw.close();
     }
 
-    public void ReadFromFile(ArrayList<Person> PersonList) {
+    public void ReadFromFile(ArrayList<Person> PersonList) {                                              // читаем из файла и отлавливаем ошибки
         File f = new File("PhoneBooke.csv");
         try {
             try (BufferedReader buf = new BufferedReader(new FileReader(f))) {
@@ -61,7 +61,7 @@ public class PhoneBook {
                 }
             }
         } catch (IOException ex) {
-            
+
             System.out.println("Ошибка чтения файла" + ex.getStackTrace());
 
         }
