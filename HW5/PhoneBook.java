@@ -43,7 +43,7 @@ public class PhoneBook {
     public void writeToFile(ArrayList<Person> PersonList) throws IOException {
         FileWriter fw = new FileWriter("PhoneBooke.csv", false);
         for (Person p : PersonList) {
-            fw.write(p.getName() + " " + p.getSurname() + " - " + p.getPhoneNumber() + "\n");
+            fw.write(p.getName() + " - " + p.getSurname() + " - " + p.getPhoneNumber() + "\n");
         }
         fw.close();
     }
@@ -61,8 +61,8 @@ public class PhoneBook {
                 }
             }
         } catch (IOException ex) {
-
-            ex.printStackTrace();
+            
+            System.out.println("Ошибка чтения файла" + ex.getStackTrace());
 
         }
     }
