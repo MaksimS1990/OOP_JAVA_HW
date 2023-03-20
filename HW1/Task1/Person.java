@@ -1,6 +1,6 @@
 package Task1;
 
-public class Person extends Humanity implements Comparable<Person> {
+public class Person implements Comparable<Person> {
     public  int age;
     private String fullName;
 
@@ -35,16 +35,16 @@ public class Person extends Humanity implements Comparable<Person> {
         return super.hashCode();
     }
 
-    @Override
-    public boolean equals(Object obg) {
-        if (obg == null) {
-            return false;
-        } else if (this.getClass() != obg.getClass()) {
-            return false;
-        } else if (this.getFullName().equals(((Person) obg).getFullName())) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    // @Override                                                                // добавил как пример условия
+    // public boolean equals(Object obg) {
+    //     if (obg == null) {
+    //         return false;
+    //     } else if (this.getClass() != obg.getClass()) {
+    //         return false;
+    //     } else if (this.getFullName().equals(((Person) obg).getFullName())) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
 }

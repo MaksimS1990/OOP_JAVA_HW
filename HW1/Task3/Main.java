@@ -48,7 +48,6 @@ public class Main {
         System.out.println("Ваш отсортированный по имени список домашних питомцев: ");
         System.out.println(newlist);
         System.out.println("-".repeat(150));
-        System.out.println("-".repeat(150));
 
         // System.out.println(cat.equals(pig));           питомцы не равны
 

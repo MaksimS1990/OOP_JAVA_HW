@@ -2,7 +2,7 @@ package Task1;
 
 import java.util.ArrayList;
 
-public class GeoTree extends Humanity implements Append {
+public class GeoTree implements Append {
 
     private ArrayList<Node> tree = new ArrayList<>();
 
