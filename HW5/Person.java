@@ -1,5 +1,7 @@
 package HW5;
 
+import java.util.Scanner;
+
 public class Person implements Printable {
     
     private String Name;
@@ -42,5 +44,9 @@ public class Person implements Printable {
 
     public boolean contains(String str) {
         return this.PhoneNumber.contains(str) || this.Name.contains(str) || this.Surname.contains(str);
+    }
+
+    public boolean equals(String str) {                         // пока не придумал для него реализацию
+        return this.getPhoneNumber() == str;
     }
 }
