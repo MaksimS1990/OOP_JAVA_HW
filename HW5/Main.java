@@ -9,6 +9,7 @@ public class Main {
 
         PhoneBook phoneBook = new PhoneBook();
         ArrayList<Person> PersonList = new ArrayList<>();
+
         phoneBook.ReadFromFile(PersonList);
         Menu menu = new Menu();
 

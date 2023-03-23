@@ -1,17 +1,17 @@
 package HW5;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Person implements Printable {
     
     private String Name;
     private String Surname;
-    private String PhoneNumber;
+    private ArrayList<String> PhoneNumber;
 
-    public Person(String Name, String Surname, String PhoneNumber) {
+    public Person(String Name, String Surname, String Number) {
         this.Name = Name;
         this.Surname = Surname;
-        this.PhoneNumber = PhoneNumber;
+        this.PhoneNumber.add(Number);
     }
 
     public String getName() {
@@ -31,22 +31,26 @@ public class Person implements Printable {
     }
 
     public String getPhoneNumber() {
-        return this.PhoneNumber;
+    StringBuilder sb = new StringBuilder();
+        for (String num  : PhoneNumber) {
+            sb.append(num + " / ");
+        }
+        return sb.toString();
     }
 
-    public String setPhoneNumber(String PhoneNumber) {
-        return this.PhoneNumber = PhoneNumber;
+    public void setPhoneNumber(String Number) {
+        PhoneNumber.add(Number);
     }
 
     public void print() {
-        System.out.println(this.Name + " " + this.Surname + " " + this.PhoneNumber);
+        System.out.println(this.Name + " " + this.Surname + " " + getPhoneNumber());
     }
 
     public boolean contains(String str) {
         return this.PhoneNumber.contains(str) || this.Name.contains(str) || this.Surname.contains(str);
     }
 
-    public boolean equals(String str) {                         // пока не придумал для него реализацию
-        return this.getPhoneNumber() == str;
-    }
+    // public boolean equals(String str) {                         // пока не придумал для него реализацию
+    //     return this.getPhoneNumber() == str;
+    // }
 }
