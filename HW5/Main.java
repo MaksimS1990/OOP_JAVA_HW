@@ -31,6 +31,16 @@ public class Main {
             } else if (str.equals("2")) {
                 phoneBook.addAContact(PersonList);
             } else if (str.equals("3")) {
+                System.out.println("Введите имя или фамилию контакта, которому хотите добавить номер телефона: ");
+                str = scanner.nextLine();
+                for (Person p : PersonList) {
+                    if (p.contains(str)) {
+                        System.out.println("Введите номер: ");
+                        str = scanner.nextLine();
+                        p.setPhoneNumber(str);
+                }
+            }
+            } else if (str.equals("4")) {
                 System.out.println("Введите имя, фамилию либо номер телефона искомого: ");
                 str = scanner.nextLine();
                 for (Person p : PersonList) {
@@ -40,11 +50,11 @@ public class Main {
                 }
                 System.out.println("Нажмите enter, чтобы продолжит!");
                 str = scanner.nextLine();
-            } else if (str.equals("4")) {
+            } else if (str.equals("5")) {
                 phoneBook.deleteContact(PersonList);
                 System.out.println("Нажмите enter, чтобы продолжит!");
                 str = scanner.nextLine();
-            } else if (str.equals("5")) {
+            } else if (str.equals("6")) {
                 phoneBook.writeToFile(PersonList);
             }
         }

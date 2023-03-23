@@ -6,7 +6,7 @@ public class Person implements Printable {
     
     private String Name;
     private String Surname;
-    private ArrayList<String> PhoneNumber;
+    private ArrayList<String> PhoneNumber = new ArrayList<>();
 
     public Person(String Name, String Surname, String Number) {
         this.Name = Name;
@@ -33,7 +33,7 @@ public class Person implements Printable {
     public String getPhoneNumber() {
     StringBuilder sb = new StringBuilder();
         for (String num  : PhoneNumber) {
-            sb.append(num + " / ");
+            sb.append(num + "  ");
         }
         return sb.toString();
     }

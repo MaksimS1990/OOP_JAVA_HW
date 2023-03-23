@@ -34,13 +34,13 @@ public class PhoneBook implements WriteFile, ReadFile {
         }
     }
 
-    public void deleteContact(ArrayList List){
+    public void deleteContact(ArrayList List) {
         System.out.println("Введите порядкой номер контакта, который хотите удалить: ");
         Scanner scanner = new Scanner(System.in);
         int in = scanner.nextInt();
         List.remove(in - 1);
     }
-
+    
     @Override
     public void writeToFile(ArrayList<Person> PersonList) throws IOException {                            // записываем в файл
         FileWriter fw = new FileWriter("PhoneBook.csv", false);
