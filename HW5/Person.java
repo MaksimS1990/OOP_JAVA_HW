@@ -32,7 +32,7 @@ public class Person implements Printable {
 
     public String getPhoneNumber() {
     StringBuilder sb = new StringBuilder();
-        for (String num  : PhoneNumber) {
+        for (String num : PhoneNumber) {
             sb.append(num + "  ");
         }
         return sb.toString();

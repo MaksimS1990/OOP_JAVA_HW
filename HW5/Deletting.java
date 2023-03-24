@@ -2,6 +2,6 @@ package HW5;
 
 import java.util.ArrayList;
 
-public interface Deleting {
+public interface Deletting {
     void deleteContact(ArrayList<Person> List);
 }

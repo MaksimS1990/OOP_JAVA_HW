@@ -35,7 +35,7 @@ public class Main {
                 str = scanner.nextLine();
                 for (Person p : PersonList) {
                     if (p.contains(str)) {
-                        System.out.println("Введите номер: ");
+                        System.out.println("Введите номер (не забудьте потом перезаписать внесенные изменения): ");
                         str = scanner.nextLine();
                         p.setPhoneNumber(str);
                 }

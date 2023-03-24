@@ -35,7 +35,7 @@ public class ToWork {
         System.out.println("Список задач, отсортированный по важности: ");
         Tasks.sort(new DegreeOfImportanceComparator());
         for (AbstractListTasks g : Tasks) {
-            System.out.println(g); ;
+            System.out.println(g);
         }
     }
 }
